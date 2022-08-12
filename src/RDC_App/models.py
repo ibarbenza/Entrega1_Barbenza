@@ -1,5 +1,6 @@
-from warnings import WarningMessage
+from datetime import datetime
 from django.db import models
+from django.utils import timezone
 
 # Create your models here.
 
@@ -37,6 +38,9 @@ class Copas(models.Model):
 
 class Reseña(models.Model):
     titulo = models.CharField(max_length=50)
-    fecha = models.DateField()
+    fecha = models.DateField(default=datetime.now)
     contenido = models.CharField(max_length=2000)
     rating = models.PositiveIntegerField()
+
+    def __str__(self) -> str:
+        return self.titulo

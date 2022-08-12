@@ -12,7 +12,7 @@
         </form></center>
     </div>
     
-    {% for vino in vinos %}
+    {% for bebida in vinos %}
 
     <div class="col mb-5">
         <div class="card h-100">
@@ -22,15 +22,15 @@
             <div class="card-body p-4">
                 <div class="text-center">
                     <!-- Product name-->
-                    <h5 class="fw-bolder">{{vino.bodega}}</h5>
-                    <h6 class="fw-bolder">{{vino.etiqueta}}</h6>
+                    <h5 class="fw-bolder">{{bebida.clase}}</h5>
+                    <h6 class="fw-bolder">{{bebida.marca}}</h6>
                     <!-- Product price-->
-                    <p>${{vino.precio_botella}}</p>
+                    <p>${{bebida.precio_botella}}</p>
 
-                    {% if vino.stock > number %}
-                        <b><p style="color:green">Stock: {{vino.stock}}</p></b>
+                    {% if bebida.stock > number %}
+                        <b><p style="color:green">Stock: {{bebida.stock}}</p></b>
                     {% else %}
-                        <b><p style="color:red">Stock: {{vino.stock}}</p></b>
+                        <b><p style="color:red">Stock: {{bebida.stock}}</p></b>
                     {% endif %}
                 </div>
             </div>
