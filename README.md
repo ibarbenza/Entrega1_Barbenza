@@ -6,3 +6,4 @@
 - Superusuario
     - user: ibarbenza
     - pass: adminadmin
+    URL para ingresar /productos/inicio
